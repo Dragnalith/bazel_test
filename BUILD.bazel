@@ -1,0 +1,9 @@
+alias(
+    name = "hello_world",
+    actual = "//src/hello_world",
+)
+
+alias(
+    name = "foo",
+    actual = "//src/foo",
+)

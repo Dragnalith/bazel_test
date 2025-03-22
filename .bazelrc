@@ -1,0 +1,7 @@
+startup --windows_enable_symlinks
+build --enable_runfiles
+common --incompatible_autoload_externally=
+common:silent --noshow_progress
+common:silent --ui_event_filters=,+error,+fail,+warning
+common:silent --show_result=0
+common:silent --logging=0

@@ -1,0 +1,3 @@
+- [ ] create a simple C++ program
+- [ ] The C++ program compile with a custom toolchain builtin using MSVC
+- [ ] Experiment how works runfiles
