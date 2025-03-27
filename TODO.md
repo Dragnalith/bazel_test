@@ -1,3 +1,6 @@
-- [ ] create a simple C++ program
+- [x] create a simple C++ program
 - [ ] The C++ program compile with a custom toolchain builtin using MSVC
-- [ ] Experiment how works runfiles
+- [ ] You can select C++ feature without specify compiler-specific flags. E.g debug info, optimization, C++ version, ...
+- [ ] How to package an app with the executable and depending file (.dll or assets) as one folder with a specific layout that you can run with `bazel run`
+- [ ] How to make `bazel run` run target which cannot be executed on the host, but require an emulator or a devkit?
+- [ ] MSVC toolchain support /ZI, /Zi, and /Z7

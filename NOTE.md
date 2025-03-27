@@ -8,3 +8,5 @@
 - So you can run a target without bazel output with: `bazel --quiet run --noshow_progress --ui_event_filters= --show_result=0 --logging=0 //my/target/label`
 - It is possible to use --explain=explain.txt to get more info about what actions have run and why
 - It is possible to use -s to display the detail about actions which are run
+- By default, `bazel run` run the target with its workspace as working directory.
+- despite what the documentation says, --script_path is working on windows and generate regular windows batch_script
