@@ -4,6 +4,6 @@ alias(
 )
 
 alias(
-    name = "foo",
-    actual = "//src/foo",
+    name = "simplang-compiler",
+    actual = "//src/simplang:simplang-compiler",
 )

@@ -1,7 +1,8 @@
 load("@rules_cc//cc:defs.bzl", "cc_binary")
 
 cc_binary(
-    name = "foo",
+    name = "simplang-compiler",
     srcs = ["main.cpp"],
+    copts = ["/std:c++20"],
     visibility = ["//visibility:public"],
 )
