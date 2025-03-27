@@ -1,0 +1,4 @@
+SET 42
+ADD 10
+ADD 15
+SUB 5

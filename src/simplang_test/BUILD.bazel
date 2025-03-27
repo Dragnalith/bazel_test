@@ -1,0 +1,14 @@
+load("@rules_cc//cc:defs.bzl", "cc_binary")
+load("//src/simplang:slg.bzl", "slg_binary")
+
+slg_binary(
+    name = "example",
+    src = "example.slg",
+    language = "cpp",  # or "python"
+)
+
+cc_binary(
+    name = "example_cpp",
+    srcs = [":example"],
+    visibility = ["//visibility:public"],
+)
