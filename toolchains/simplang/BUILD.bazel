@@ -1,0 +1,14 @@
+load("//toolchains/simplang:toolchain.bzl", "simplang_toolchain")
+
+toolchain_type(name = "toolchain_type")
+
+simplang_toolchain(
+    name = "simplang_toolchain",
+    compiler_path = "//src/simplang:simplang-compiler",
+)
+
+toolchain(
+    name = "toolchain",
+    toolchain_type = ":toolchain_type",
+    toolchain = ":simplang_toolchain",
+)

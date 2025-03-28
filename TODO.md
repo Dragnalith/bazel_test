@@ -1,7 +1,10 @@
 - [x] create a simple C++ program
+- [x] create a dump language and compiler *simplang* to study toolchain
+- [x] study toolchain by creating a toolchain for simplang
 - [ ] The C++ program compile with a custom toolchain builtin using MSVC
 - [ ] How does gazelle knows the path to the source workspace to modify the BUILD when run using `bazel run` (since default cwd is the build tree)?
 - [ ] You can select C++ feature without specify compiler-specific flags. E.g debug info, optimization, C++ version, ...
 - [ ] How to package an app with the executable and depending file (.dll or assets) as one folder with a specific layout that you can run with `bazel run`
+    - [ ] Try runfiles destination path can be modified in the Runfiles provider
 - [ ] How to make `bazel run` run target which cannot be executed on the host, but require an emulator or a devkit?
 - [ ] MSVC toolchain support /ZI, /Zi, and /Z7

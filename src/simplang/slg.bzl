@@ -1,6 +1,8 @@
 load("@rules_cc//cc:defs.bzl", "cc_binary")
 
 def _slg_binary_impl(ctx):
+    info = ctx.toolchains["//toolchains/simplang:toolchain_type"].simplang_info
+
     # Get the input file
     input_file = ctx.file.src
     
@@ -19,7 +21,7 @@ def _slg_binary_impl(ctx):
     
     # Run the compiler
     ctx.actions.run(
-        executable = ctx.executable._compiler,
+        executable = info.compiler_path,
         arguments = [args],
         inputs = [input_file],
         outputs = [output_file],
@@ -40,11 +42,7 @@ slg_binary = rule(
         "language": attr.string(
             values = ["cpp", "python"],
             default = "cpp",
-        ),
-        "_compiler": attr.label(
-            default = "//src/simplang:simplang-compiler",
-            executable = True,
-            cfg = "exec",
-        ),
+        )
     },
+    toolchains = ["//toolchains/simplang:toolchain_type"],
 ) 

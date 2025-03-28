@@ -7,3 +7,5 @@ to maintain consistency across the build process.
 """
 
 bazel_dep(name = "rules_cc", version = "0.1.1")
+
+register_toolchains("//toolchains/simplang:toolchain")
