@@ -10,3 +10,10 @@
 - It is possible to use -s to display the detail about actions which are run
 - By default, `bazel run` run the target with its workspace as working directory.
 - despite what the documentation says, --script_path is working on windows and generate regular windows batch_script
+
+# 2025-03-30
+
+- Default rules_cc register default toolchains in the MODULE.bazel of rules_cc.
+- It is possible to disable the default C++ toochains registration with env varible `BAZEL_DO_NOT_DETECT_CPP_TOOLCHAIN=1`. You can set it in the .bazelrc: `--repo_env=BAZEL_DO_NOT_DETECT_CPP_TOOLCHAIN=1`.
+- The rules_cc module declare to extension repository @local_config_cc and @local_config_cc_toolchains. Because @local_config_cc_toolchains only contain a BUILD, it is considered as a registration-only repo and it is not materialized in the external/ of the exec root
+- The default toochain(...) is declared in @local_config_cc_toolchains using cc_toolchain(...) declared in @local_config_cc
